@@ -31,20 +31,19 @@
     "test": "vscode-test"
   },
   "devDependencies": {
+    "@tlx/atlas": "4.1.0",
     "@types/mocha": "^10.0.6",
     "@types/node": "18.x",
     "@types/vscode": "^1.85.0",
-    "@typescript-eslint/eslint-plugin": "^6.19.1",
-    "@typescript-eslint/parser": "^6.19.1",
+    "@typescript-eslint/eslint-plugin": "6.20.0",
+    "@typescript-eslint/parser": "6.20.0",
     "@vscode/test-cli": "^0.0.4",
     "@vscode/test-electron": "^2.3.9",
-    "eslint": "^8.56.0",
-    "prettier": "3.2.4",
-    "typescript": "^5.3.3"
-  },
-  "dependencies": {
-    "@tlx/atlas": "4.1.0",
+    "eslint": "8.56.0",
     "os": "0.1.2",
-    "postcss": "8.4.33"
-  }
+    "postcss": "8.4.33",
+    "prettier": "3.2.4",
+    "typescript": "5.3.3"
+  },
+  "dependencies": {}
 }
