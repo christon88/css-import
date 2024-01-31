@@ -9,7 +9,10 @@
   "categories": [
     "Other"
   ],
-  "activationEvents": [],
+  "activationEvents": [
+    "onLanguage:typescriptreact",
+    "onLanguage:css"
+  ],
   "main": "./out/extension.js",
   "contributes": {
     "commands": [
@@ -36,9 +39,12 @@
     "@vscode/test-cli": "^0.0.4",
     "@vscode/test-electron": "^2.3.9",
     "eslint": "^8.56.0",
+    "prettier": "3.2.4",
     "typescript": "^5.3.3"
   },
   "dependencies": {
+    "@tlx/atlas": "4.1.0",
+    "os": "0.1.2",
     "postcss": "8.4.33"
   }
 }
