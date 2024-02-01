@@ -29,3 +29,7 @@ Does only support one file
 ### 0.1.0
 
 Mainly for my own use
+
+### 0.1.1
+
+Changes activation
