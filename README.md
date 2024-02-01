@@ -1,27 +1,31 @@
-# atl-autocomplete README
+# css-import README
 
-Tiny extension to provide autocomplete for atl utility classes and CSS variables
+Provides autocomplete for utility classes and CSS variables in node_modules
 
 ## Features
 
-Autocomplete for atl utility classes and atl CSS variables
-
-## Requirements
-
-N/A
+Autocomplete for utility classes and CSS variables in node_modules
 
 ## Extension Settings
 
-N/A
+Requires `.atlAutocomplete.json` file at root with the following entries
+
+```
+{
+    "cssUtilityPath": "node_modules/[path to css]",
+    "cssVariablesPath": "node_modules/[path to css]"
+}
+
+```
 
 ## Known Issues
 
-Let me know I guess
+Does not watch `.atlAutocomplete.json` so extension needs to be reloaded after changes.
+
+Does only support one file
 
 ## Release Notes
 
-Users appreciate release notes as you update your extension.
-
 ### 0.1.0
 
-For internal testing in Astro
+Mainly for my own use

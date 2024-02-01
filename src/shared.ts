@@ -14,8 +14,10 @@ export const getClassNames = async (path: string) => {
       className,
       vscode.CompletionItemKind.Class
     );
-    //   const documentation =new vscode.MarkdownString('```css\n' + rules + '\n```'); // Use MarkdownString for better formatting
-    item.detail = rules;
+    const documentation = new vscode.MarkdownString(
+      "```css\n" + rules + "\n```"
+    ); // Use MarkdownString for better formatting
+    item.documentation = documentation;
     completionItems.push(item);
   }
 

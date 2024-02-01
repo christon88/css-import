@@ -2,7 +2,6 @@ import path from "path";
 import * as vscode from "vscode";
 import * as fs from "fs";
 import { getClassNames, getVariables } from "./shared";
-
 export function activate(context: vscode.ExtensionContext) {
   const workspaceFolders = vscode.workspace.workspaceFolders;
   if (workspaceFolders && workspaceFolders.length > 0) {
@@ -21,7 +20,13 @@ export function activate(context: vscode.ExtensionContext) {
       // Now you have your configuration object
       const { cssUtilityPath, cssVariablesPath } = config;
 
-      const classCompletionItems = await getClassNames(cssUtilityPath);
+      const resolvedClassPath = path.join(workspaceRootPath, cssUtilityPath);
+      const resolvedVariablePath = path.join(
+        workspaceRootPath,
+        cssVariablesPath
+      );
+
+      const classCompletionItems = await getClassNames(resolvedClassPath);
       const classNameProvider = vscode.languages.registerCompletionItemProvider(
         "typescriptreact",
         {
@@ -35,7 +40,7 @@ export function activate(context: vscode.ExtensionContext) {
           },
         }
       );
-      const variableCompletionItems = await getVariables(cssVariablesPath);
+      const variableCompletionItems = await getVariables(resolvedVariablePath);
       const variableProvider = vscode.languages.registerCompletionItemProvider(
         "css",
         {

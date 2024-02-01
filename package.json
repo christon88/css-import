@@ -1,7 +1,7 @@
 {
-  "name": "atl-autocomplete",
-  "displayName": "atl-autocomplete",
-  "description": "Provides autocompletion for atl utility classeses",
+  "name": "css-import",
+  "displayName": "css-import",
+  "description": "Lets you add css from node modules for autocompletion",
   "version": "0.0.1",
   "engines": {
     "vscode": "^1.85.0"
@@ -17,7 +17,7 @@
   "contributes": {
     "commands": [
       {
-        "command": "atl-autocomplete.helloWorld",
+        "command": "css-import.helloWorld",
         "title": "Hello World"
       }
     ]
@@ -31,7 +31,6 @@
     "test": "vscode-test"
   },
   "devDependencies": {
-    "@tlx/atlas": "4.1.0",
     "@types/mocha": "^10.0.6",
     "@types/node": "18.x",
     "@types/vscode": "^1.85.0",
@@ -45,7 +44,9 @@
     "prettier": "3.2.4",
     "typescript": "5.3.3"
   },
-  "dependencies": {},
+  "dependencies": {
+    "chokidar": "3.5.3"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/Tripletex-AS/atl-autocomplete"
