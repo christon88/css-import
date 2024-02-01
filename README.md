@@ -32,4 +32,8 @@ Mainly for my own use
 
 ### 0.1.1
 
-Changes activation
+Change activation
+
+### 0.1.2
+
+Change repository
