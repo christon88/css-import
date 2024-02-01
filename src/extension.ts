@@ -6,12 +6,12 @@ export function activate(context: vscode.ExtensionContext) {
   const workspaceFolders = vscode.workspace.workspaceFolders;
   if (workspaceFolders && workspaceFolders.length > 0) {
     const workspaceRootPath = workspaceFolders[0].uri.fsPath; // Assuming single workspace
-    const configPath = path.join(workspaceRootPath, ".atlAutocomplete.json");
+    const configPath = path.join(workspaceRootPath, ".cssImport.json");
 
     fs.readFile(configPath, "utf8", async (err, data) => {
       if (err) {
         vscode.window.showErrorMessage(
-          ".atlAutocomplete file not found or unreadable."
+          ".cssImport file not found or unreadable."
         );
         return;
       }

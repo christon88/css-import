@@ -4,7 +4,6 @@ import postcss from "postcss";
 
 export const getClassNames = async (path: string) => {
   const cssContent = await readCssFile(path);
-  console.log("here");
   const classRules = extractClassNamesAndRules(cssContent);
 
   const completionItems = [];

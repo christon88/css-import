@@ -2,7 +2,7 @@
   "name": "css-import",
   "displayName": "css-import",
   "description": "Lets you add css from node modules for autocompletion",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "engines": {
     "vscode": "^1.85.0"
   },
@@ -10,9 +10,9 @@
     "Other"
   ],
   "activationEvents": [
-    "onLanguage:typescriptreact",
-    "onLanguage:css"
+    "workspaceContains:**/.cssImport.json"
   ],
+  "publisher": "christian-larons",
   "main": "./out/extension.js",
   "contributes": {
     "commands": [

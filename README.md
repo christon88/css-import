@@ -8,7 +8,7 @@ Autocomplete for utility classes and CSS variables in node_modules
 
 ## Extension Settings
 
-Requires `.atlAutocomplete.json` file at root with the following entries
+Requires `.cssImport.json` file at root with the following entries
 
 ```
 {
@@ -20,7 +20,7 @@ Requires `.atlAutocomplete.json` file at root with the following entries
 
 ## Known Issues
 
-Does not watch `.atlAutocomplete.json` so extension needs to be reloaded after changes.
+Does not watch `.cssImport.json` so extension needs to be reloaded after changes.
 
 Does only support one file
 
