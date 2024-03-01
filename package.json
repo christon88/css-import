@@ -2,7 +2,7 @@
   "name": "css-import",
   "displayName": "css-import",
   "description": "Lets you add css from node modules for autocompletion",
-  "version": "0.1.2",
+  "version": "0.1.4",
   "engines": {
     "vscode": "^1.85.0"
   },
@@ -13,7 +13,7 @@
     "workspaceContains:**/.cssImport.json"
   ],
   "publisher": "christian-larons",
-  "main": "./out/extension.js",
+  "main": "./out/main.js",
   "contributes": {
     "commands": [
       {
@@ -23,9 +23,11 @@
     ]
   },
   "scripts": {
-    "vscode:prepublish": "npm run compile",
-    "compile": "tsc -p ./",
-    "watch": "tsc -watch -p ./",
+    "vscode:prepublish": "npm run esbuild-base -- --minify",
+    "esbuild-base": "esbuild ./src/extension.ts --bundle --outfile=out/main.js --external:vscode --format=cjs --platform=node",
+    "esbuild": "npm run esbuild-base -- --sourcemap",
+    "esbuild-watch": "npm run esbuild-base -- --sourcemap --watch",
+    "test-compile": "tsc -p ./",
     "pretest": "npm run compile && npm run lint",
     "lint": "eslint src --ext ts",
     "test": "vscode-test"
@@ -38,14 +40,13 @@
     "@typescript-eslint/parser": "6.20.0",
     "@vscode/test-cli": "^0.0.4",
     "@vscode/test-electron": "^2.3.9",
+    "esbuild": "0.20.0",
     "eslint": "8.56.0",
-    "os": "0.1.2",
-    "postcss": "8.4.33",
     "prettier": "3.2.4",
     "typescript": "5.3.3"
   },
   "dependencies": {
-    "chokidar": "3.5.3"
+    "postcss": "8.4.33"
   },
   "repository": {
     "type": "git",
