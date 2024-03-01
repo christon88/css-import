@@ -8,7 +8,7 @@ Autocomplete for utility classes and CSS variables in node_modules
 
 ## Extension Settings
 
-Requires `.cssImport.json` file at root with the following entries
+Requires `.vscode/.cssImport.json` file with the following entries
 
 ```
 {
