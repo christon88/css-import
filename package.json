@@ -10,18 +10,10 @@
     "Other"
   ],
   "activationEvents": [
-    "workspaceContains:**/.cssImport.json"
+    "workspaceContains:**/.vscode/cssImport.json"
   ],
   "publisher": "christian-larons",
   "main": "./out/main.js",
-  "contributes": {
-    "commands": [
-      {
-        "command": "css-import.helloWorld",
-        "title": "Hello World"
-      }
-    ]
-  },
   "scripts": {
     "vscode:prepublish": "npm run esbuild-base -- --minify",
     "esbuild-base": "esbuild ./src/extension.ts --bundle --outfile=out/main.js --external:vscode --format=cjs --platform=node",
